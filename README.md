@@ -1,24 +1,52 @@
-# README
+<h3 align="center">
+  B2W API PLANETS
+</h3>
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## :rocket: About the challenge
 
-Things you may want to cover:
+This is a Star Wars planets REST API, where it should show how many times a planet has appeared in the Star Wars franchise, integrating with the public Star Wars API: https://swapi.dev/about.
+API proposed by B2W Digital as a challenge for the position of back-end developer.
 
-* Ruby version
 
-* System dependencies
+### Testing specification
 
-* Configuration
+- **`should be able to create a new planet`**: application must allow a planet to be created and return a json with the created project.
 
-* Database creation
+- **`should be able to list the planet`**: application should allow an array of all the planets that have been created so far to be returned.
 
-* Database initialization
+- **`should be able to find planets by id`**: application should allow searches with planets id and return a json.
 
-* How to run the test suite
+- **`should throw errors when trying to find an unregistered planet by id'`**: application should not allow searches with id of planets that do not exist.
 
-* Services (job queues, cache servers, search engines, etc.)
+- **`should be able to find planets by name'`**: application should allow searches with planets name and return a json.
 
-* Deployment instructions
+- **`should throw errors when trying to find an unregistered planet by name'`**: application should not allow searches with name of planets that do not exist.
 
-* ...
+- **`should be able to delete the planet'`**: Application must allow the delete route to delete a planet, and when deleting, it returns an empty response, with status 204.
+
+### Local use
+
+
+* Install the gem
+
+```sh
+bundle install
+```
+
+* Start service from MongoDB
+
+```sh
+sudo service mongod start
+```
+
+* Raise application
+
+```sh
+rails s
+```
+
+* Run the tests
+
+```sh
+rspec spec
+```

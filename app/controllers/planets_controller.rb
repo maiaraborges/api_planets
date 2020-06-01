@@ -33,7 +33,7 @@ class PlanetsController < ApplicationController
   def destroy
     @planet = Planet.find_by(id: params[:id])
     @planet.destroy
-    render json: @planet, status: :ok
+    render json: @planet, status: :no_content
   end
 
   # Parametros aceitos

@@ -45,7 +45,6 @@ RSpec.describe "Planets", type: :request do
   it "should be able to delete the planet" do
     planet = Planet.first
     delete "/planets/#{planet.id}"
-    expect(response).to have_http_status(200)
-    expect(response.parsed_body).to match(planet.as_json)
+    expect(response).to have_http_status(204)
   end
 end
