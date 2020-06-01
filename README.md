@@ -38,7 +38,7 @@ bundle install
 sudo service mongod start
 ```
 
-* Raise application
+* Upload application
 
 ```sh
 rails s
