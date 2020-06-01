@@ -23,7 +23,7 @@ RSpec.describe "Planets", type: :request do
     expect(response.parsed_body).to match(planet.as_json, )
   end
 
-  it 'should throw errors when trying to find an unregistered planet by id' do
+  it 'should be able generate errors when trying to search for an unregistered planet by id' do
     get '/planets/1'
     expect(response).to have_http_status(:not_found)
   end
@@ -37,7 +37,7 @@ RSpec.describe "Planets", type: :request do
     expect(response.parsed_body["quantity_movies"]).to be(planet.films.length)
   end
 
-  it 'should throw errors when trying to find an unregistered planet by name' do
+  it 'should be able generate errors when trying to search for an unregistered planet by name' do
     get '/planets/name/Saturno'
     expect(response).to have_http_status(:not_found)
   end

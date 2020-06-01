@@ -16,11 +16,11 @@ API proposed by B2W Digital as a challenge for the position of back-end develope
 
 - **`should be able to find planets by id`**: application should allow searches with planets id and return a json.
 
-- **`should throw errors when trying to find an unregistered planet by id'`**: application should not allow searches with id of planets that do not exist.
+- **`should be able generate errors when trying to search for an unregistered planet by id'`**: application should not allow searches with id of planets that do not exist.
 
 - **`should be able to find planets by name'`**: application should allow searches with planets name and return a json.
 
-- **`should throw errors when trying to find an unregistered planet by name'`**: application should not allow searches with name of planets that do not exist.
+- **`should be able generate errors when trying to search for an unregistered planet by name'`**: application should not allow searches with name of planets that do not exist.
 
 - **`should be able to delete the planet'`**: Application must allow the delete route to delete a planet, and when deleting, it returns an empty response, with status 204.
 
