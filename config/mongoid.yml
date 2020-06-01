@@ -1,0 +1,21 @@
+development:
+  clients:
+    default:
+      database: star_wars_api_development
+      hosts:
+        - localhost:27017
+      options:
+        identity_map_enabled: true
+        include_root_in_json: false
+        raise_not_found_error: false
+  options:
+test:
+  clients:
+    default:
+      database: star_wars_api_test
+      hosts:
+        - localhost:27017
+      options:
+        read:
+          mode: :primary
+        max_pool_size: 1
