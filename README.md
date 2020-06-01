@@ -4,9 +4,8 @@
 
 ## :rocket: About the challenge
 
-This is a Star Wars planets REST API, where it should show how many times a planet has appeared in the Star Wars franchise, integrating with the public Star Wars API: https://swapi.dev/about.
+This is a Star Wars planets REST API, in which must show how many times a planet has appeared in Star Wars movies, integrating with the public Star Wars API: https://swapi.dev/about. 
 API proposed by B2W Digital as a challenge for the position of back-end developer.
-
 
 ### Testing specification
 
