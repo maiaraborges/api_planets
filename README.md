@@ -30,8 +30,7 @@ API proposed by B2W Digital as a challenge for the position of back-end develope
 |`/planets/name/:name`|`GET`|200|Get an object from the planet by name|
 |`/planets/:id`|`DELETE`|204|Delete a planet|
 
-
-### Testing specification
+## Testing specification
 
 - **`should be able to create a new planet`**: application must allow a planet to be created and return a json with the created project.
 
@@ -47,8 +46,7 @@ API proposed by B2W Digital as a challenge for the position of back-end develope
 
 - **`should be able to delete the planet`**: Application must allow the delete route to delete a planet, and when deleting, it returns an empty response, with status 204.
 
-### Local use
-
+## Local use
 
 * Install the gem
 
