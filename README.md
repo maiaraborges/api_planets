@@ -96,6 +96,12 @@ Get all planets of an issue by id
 }
 ```
 
+**Error return:**
+
+```javascript
+  HTTP/1.1 404 Notfound
+```
+
 #### GET `/planets/name/:name`
 
 Get all planets of an issue by name
@@ -120,6 +126,12 @@ Get all planets of an issue by name
 }
 ```
 
+**Error return:**
+
+```javascript
+  HTTP/1.1 404 Notfound
+```
+
 #### DELETE `/planets/:id`
 
 Delete planets
@@ -132,6 +144,12 @@ Delete planets
 > 204 No Content
 ```javascript
   HTTP/1.1 204 No Content
+```
+
+**Error return:**
+
+```javascript
+  HTTP/1.1 404 Notfound
 ```
 
 ## Testing specification
