@@ -7,7 +7,14 @@
 This is a Star Wars planets REST API, in which must show how many times a planet has appeared in Star Wars movies, integrating with the public Star Wars API: https://swapi.dev/about. 
 API proposed by B2W Digital as a challenge for the position of back-end developer.
 
+### Stack
+
+* Ruby 2.6.5
+* Rails 5.2.4
+
 ## Planets Resource
+
+List of required environment vars
 
 ### Planets entity
 
@@ -29,6 +36,103 @@ API proposed by B2W Digital as a challenge for the position of back-end develope
 |`/planets/:id`|`GET`|200|Get an object from the planet by id|
 |`/planets/name/:name`|`GET`|200|Get an object from the planet by name|
 |`/planets/:id`|`DELETE`|204|Delete a planet|
+
+#### POST `/events` 
+
+Create an issue event
+
+**Request:**
+> POST /events
+
+**Response:**
+
+> 201 Created
+```javascript
+  {
+    "_id": "5eea8827e05d0c21e4b6323a",
+    "climate": "temperate",
+    "name": "Alderaan",
+    "terrain": "grasslands, mountains"
+  }
+```
+
+#### GET `/planets`
+
+List all planets
+
+**Request:**
+> GET /planets
+
+**Response:**
+
+> 200 OK
+```javascript
+[
+  {
+    "_id": "5eea8827e05d0c21e4b6323a",
+    "climate": "temperate",
+    "name": "Alderaan",
+    "terrain": "grasslands, mountains"
+  }
+]
+```
+
+#### GET `/planets/:id`
+
+Get all planets of an issue by id
+
+**Request:**
+> GET /planets/5eea8827e05d0c21e4b6323a
+
+**Response:**
+
+> 200 OK
+```javascript
+{
+  "_id": "5eea8827e05d0c21e4b6323a",
+  "climate": "temperate",
+  "name": "Alderaan",
+  "terrain": "grasslands, mountains"
+}
+```
+
+#### GET `/planets/name/:name`
+
+Get all planets of an issue by name
+
+**Request:**
+> GET /planets/name/Alderaan
+
+**Response:**
+
+> 200 OK
+```javascript
+{
+  "_id": "5eea8827e05d0c21e4b6323a",
+  "name": "Alderaan",
+  "climate": "temperate",
+  "terrain": "grasslands, mountains",
+  "films": [
+    "http://swapi.dev/api/films/1/",
+    "http://swapi.dev/api/films/6/"
+  ],
+  "quantity_movies": 2
+}
+```
+
+#### DELETE `/planets/:id`
+
+Delete planets
+
+**Request:**
+> GET /planets/5eea8827e05d0c21e4b6323a
+
+**Response:**
+
+> 204 No Content
+```javascript
+  HTTP/1.1 204 No Content
+```
 
 ## Testing specification
 

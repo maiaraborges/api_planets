@@ -4,7 +4,7 @@ class PlanetsController < ApplicationController
   def create
     @planet = Planet.new(planet_params)
     if @planet.save
-      render json: @planet, status: :ok
+      render json: @planet, status: :created
     else
       render json: @planet.erros, status: :unprocessable_entity
     end
