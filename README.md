@@ -37,12 +37,12 @@ List of required environment vars
 |`/planets/name/:name`|`GET`|200|Get an object from the planet by name|
 |`/planets/:id`|`DELETE`|204|Delete a planet|
 
-#### POST `/events` 
+#### POST `/planets` 
 
-Create an issue event
+Create an issue planets
 
 **Request:**
-> POST /events
+> POST /planets
 
 **Response:**
 
