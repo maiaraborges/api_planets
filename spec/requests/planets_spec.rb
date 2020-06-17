@@ -20,7 +20,7 @@ RSpec.describe "Planets", type: :request do
     planet = Planet.first
     get "/planets/#{planet.id}"
     expect(response).to have_http_status(200)
-    expect(response.parsed_body).to match(planet.as_json, )
+    expect(response.parsed_body).to match(planet.as_json)
   end
 
   it 'should be able generate errors when trying to search for an unregistered planet by id' do
