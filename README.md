@@ -1,5 +1,5 @@
 <h3 align="center">
-  B2W API PLANETS
+  API PLANETS
 </h3>
 
 ## :rocket: About the challenge
